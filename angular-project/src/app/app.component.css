@@ -1,6 +1,225 @@
-p{
-    color: red;
-    font-size: 20px;
-    text-decoration: underline;
-    text-align: center;
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  height: 200px;
+}
+
+.imagen-header {
+  height: 100%;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-family: "Sedan SC", serif;
+  font-style: normal;
+}
+
+section {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container-card .caja-box {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  justify-content: space-around;
+  align-items: center;
+}
+
+h4 {
+  margin-bottom: 20px;
+}
+
+.personajes {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
+.caja-box {
+  box-shadow: 0px 0px 8px 3px rgba(156, 84, 18, 0.75);
+  border-radius: 20px;
+}
+
+.container-card .caja-box .personajes {
+  transition: all 400ms ease-out;
+  will-change: transform;
+  margin: 0;
+}
+
+.container-card .caja-box .card-body {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  background: rgba(192, 205, 207, 0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  align-content: center;
+  margin: 0;
+}
+
+.container-card .caja-box:hover > .card-body {
+  opacity: 1;
+  visibility: visible;
+}
+
+.container-card .caja-box:hover > .card-body .personajes {
+  transform: scale(1.3);
+}
+
+.container-card .caja-box .card-body p {
+  color: black;
+  font-size: 20px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.Targaryen {
+  background: #cf1b12;
+  background: linear-gradient(to right, #cf1b12 0%, #e8ff37 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Tarly {
+  background: #121fcf;
+  background: linear-gradient(to right, #121fcf 0%, #cf1512 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Stark {
+  color: #000000;
+  font-weight: 500;
+}
+
+.Baratheon {
+  background: #ecff20;
+  background: linear-gradient(to right, #ecff20 0%, #bedd62 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Lannister {
+  background: #dfff27;
+  background: linear-gradient(to right, #dfff27 0%, #dd120e 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Greyjoy {
+  background: #fbff0e;
+  background: linear-gradient(to right, #fbff0e 26%, #090101 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Clegane,
+.Baelish,
+.Seaworth {
+  color: black;
+  font-weight: 500;
+}
+
+.Tyrell {
+  background: #c3cb36;
+  background: linear-gradient(to right, #c3cb36 26%, #019b03 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Bolton {
+  background: #9f150e;
+  background: linear-gradient(to right, #9f150e 26%, #77715c 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+}
+
+.Mormont {
+  background: #1d0c9f;
+  background: linear-gradient(to right, #1d0c9f 26%, #77040a 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.Martell {
+  background: #009f28;
+  background: linear-gradient(to right, #009f28 26%, #192777 70%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.Escudo-Targaryen,
+.Escudo-Stark,
+.Escudo-Lannister,
+.Escudo-Baratheon,
+.Escudo-Martell,
+.Escudo-Tyrell,
+.Escudo-Tully,
+.Escudo-Greyjoy,
+.Escudo-Bolton,
+.Escudo-Mormont {
+  margin-top: 30px;
+  height: 60px;
+  width: 60px;
+}
+
+footer {
+  margin-top: 20px;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
+
+.streaming,
+.github {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer h5 {
+  margin-bottom: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 440px) {
+  .imagen-header {
+    width: 200px;
+  }
+  .container-card {
+    margin: 0 15px 0 15px;
+  }
 }

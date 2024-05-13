@@ -19,10 +19,17 @@ export class AppComponent {
   obtenerDatosGot(){
     this.dataService.obtenerDatos().subscribe((respuesta:any)=>{
       console.log("Respuesta: ",respuesta);
+      if (respuesta) {
+        this.datosApiGot = respuesta;
+        console.log("Bien");
+      } else {
+        console.log("Ocurrio error");
+      }
+      
     });
   }
 
   ngOnInit(){
-    this.obtenerDatosGot
+    this.obtenerDatosGot();
   }
 }

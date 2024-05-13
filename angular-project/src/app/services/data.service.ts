@@ -8,7 +8,7 @@ export class DataService {
 
   constructor() { }
 
-  API_URL: string = "https://api.gameofthronesquotes.xyz/v1/characters";
+  API_URL: string = "https://thronesapi.com/api/v2/Characters";
 
   httpClient = inject(HttpClient);
 
