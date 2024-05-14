@@ -8,11 +8,11 @@
 
 header {
   text-align: center;
-  height: 200px;
 }
 
-.imagen-header {
-  height: 100%;
+header img {
+  height: 200px;
+  object-fit: contain;
 }
 
 h1 {
@@ -23,7 +23,6 @@ h1 {
 }
 
 section {
-  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -41,7 +40,8 @@ section {
 }
 
 h4 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .personajes {
@@ -51,7 +51,7 @@ h4 {
 }
 
 .caja-box {
-  box-shadow: 0px 0px 8px 3px rgba(156, 84, 18, 0.75);
+  box-shadow: 0px 0px 8px 3px rgba(6, 6, 6, 0.75);
   border-radius: 20px;
 }
 
@@ -67,7 +67,7 @@ h4 {
   width: 100%;
   top: 0;
   background: rgba(192, 205, 207, 0.7);
-  transition: all 400ms ease-out;
+  transition: all 1s ease-out;
   opacity: 0;
   visibility: hidden;
   align-content: center;
@@ -85,11 +85,13 @@ h4 {
 
 .container-card .caja-box .card-body p {
   color: black;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.5;
   width: 100%;
   max-width: 220px;
   margin: auto;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
 .card-body {
@@ -180,28 +182,30 @@ h4 {
   font-weight: 600;
 }
 
-.Escudo-Targaryen,
-.Escudo-Stark,
-.Escudo-Lannister,
-.Escudo-Baratheon,
-.Escudo-Martell,
-.Escudo-Tyrell,
-.Escudo-Tully,
-.Escudo-Greyjoy,
-.Escudo-Bolton,
-.Escudo-Mormont {
-  margin-top: 30px;
+.Escudo-Bolton {
   height: 60px;
   width: 60px;
 }
 
+.Escudo-Ninguno {
+  opacity: 0.6;
+}
+
 footer {
-  margin-top: 20px;
+  margin-top: 30px;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.banner-footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .streaming,
@@ -215,11 +219,20 @@ footer h5 {
   margin-bottom: 10px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 440px) {
-  .imagen-header {
-    width: 200px;
-  }
+@media only screen and (min-width: 320px) and (max-width: 429px) {
   .container-card {
     margin: 0 15px 0 15px;
+  }
+
+  .banner-footer {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .logo-footer,
+  .api,
+  .streaming,
+  .github {
+    margin-bottom: 15px;
   }
 }

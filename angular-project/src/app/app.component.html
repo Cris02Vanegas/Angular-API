@@ -6,19 +6,18 @@
       class="img-fluid imagen-header"
     />
   </header>
-  <section class="container-card gap-5">
+  <section class="container-card flex-wrap gap-5">
     @for (elemento of datosApiGot; track elemento.id){
     <div class="caja-box">
       <div class="image">
         <img
           src="{{ elemento.imageUrl }}"
-          class="card-img-top personajes"
+          class="card-img-top personajes img-fluid"
           alt="{{ elemento.firstName }}"
         />
       </div>
       <div class="card-body">
-        <h4 class="card-title">{{ elemento.fullName }}</h4>
-        <h5>{{ elemento.title }}</h5>
+        <h4 class="card-title fs-2">{{ elemento.fullName }}</h4>
         @if (elemento.family === "House Targaryen" || elemento.family ===
         "Targaryan") {
         <p class="Targaryen">
@@ -27,7 +26,7 @@
         <div>
           <img
             class="Escudo-Targaryen"
-            src="../assets/images/Casa-Targaryen.png"
+            src="../assets/images/Targaryen.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
@@ -38,7 +37,7 @@
         <div>
           <img
             class="Escudo-Tully"
-            src="../assets/images/Casa-Tully.png"
+            src="../assets/images/Tully.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
@@ -50,7 +49,7 @@
         <div>
           <img
             class="Escudo-Stark"
-            src="../assets/images/Casa-Stark.png"
+            src="../assets/images/Stark.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
@@ -62,7 +61,7 @@
         <div>
           <img
             class="Escudo-Baratheon"
-            src="../assets/images/Casa-Baratheon.png"
+            src="../assets/images/Baratheon.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
@@ -74,7 +73,7 @@
         <div>
           <img
             class="Escudo-Lannister"
-            src="../assets/images/./Casa-Lannister.png"
+            src="../assets/images/Lannister.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
@@ -86,22 +85,10 @@
         <div>
           <img
             class="Escudo-Greyjoy"
-            src="../assets/images/Casa-Greyjoy.png"
+            src="../assets/images/Greyjoy.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
-        } @else if (elemento.family === "House Clegane") {
-        <p class="card-text Clegane">
-          {{ elemento.family }}
-        </p>
-        } @else if (elemento.family === "House Baelish") {
-        <p class="card-text Baelish">
-          {{ elemento.family }}
-        </p>
-        } @else if (elemento.family === "House Seaworth") {
-        <p class="card-text Seaworth">
-          {{ elemento.family }}
-        </p>
         } @else if (elemento.family === "House Tyrell" || elemento.family
         ==="Tyrell") {
         <p class="card-text Tyrell">
@@ -110,7 +97,7 @@
         <div>
           <img
             class="Escudo-Tyrell"
-            src="../assets/images/Casa-Tyrell.png"
+            src="../assets/images/Tyrell.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
@@ -143,52 +130,80 @@
         <div>
           <img
             class="Escudo-Martell"
-            src="../assets/images/Casa-Martell.png"
+            src="../assets/images/Martell.png"
+            alt="{{ elemento.lastName }}"
+          />
+        </div>
+        }@else if (elemento.family === "Bronn" || elemento.family === "Qyburn"
+        || elemento.family === "Worm" || elemento.family === "Worm" ||
+        elemento.family === "" || elemento.family === "Free Folk" ||
+        elemento.family === "Sand" || elemento.family === "Lorath" ||
+        elemento.family === "Unkown" || elemento.family === "Sparrow" ||
+        elemento.family === "Lorathi" || elemento.family === "Naharis" ||
+        elemento.family === "None" || elemento.family === "Naathi" ||
+        elemento.family === "Tarth" || elemento.family === "House Baelish" ||
+        elemento.family === "House Seaworth" || elemento.family === "Tarth" ||
+        elemento.family === "House Clegane" || elemento.family === "Unknown" ) {
+        <div>
+          <img
+            class="Escudo-Ninguno"
+            src="../assets/images/Ninguno.png"
             alt="{{ elemento.lastName }}"
           />
         </div>
         }
+        <h5>{{ elemento.title }}</h5>
       </div>
     </div>
     }
   </section>
-  <footer class="gap-5">
-    <div class="logo-footer">
-      <img src="../assets/images/logo-footer2.png" alt="logo-stark" />
-    </div>
-    <!-- <div class="col mb-2 mt-4 logo-footer">
-      <p class="text-body-light">© Game Of Thrones</p>
-    </div> -->
-    <div>
-      <h5>API</h5>
-      <a
-        href="https://thronesapi.com/swagger/index.html?urls.primaryName=Game%20of%20Thrones%20API%20v2"
-      >
-        <img src="../assets/images/api.png" alt="API" />
-      </a>
-    </div>
-    <div class="streaming">
-      <h5>Plataforma</h5>
-      <a href="https://www.hbo.com/game-of-thrones" target="_blank">
-        <img src="../assets/images/hbo.png" alt="HBO" class="logo-hbo" />
-      </a>
-    </div>
-    <div class="github">
-      <h5>GitHub</h5>
-      <a class="github" href="https://github.com/Cris02Vanegas" target="_blank">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          fill="currentColor"
-          class="bi bi-github"
-          viewBox="0 0 16 16"
+  <footer>
+    <div class="banner-footer">
+      <div class="logo-footer">
+        <img src="../assets/images/logo.png" alt="logo-targaryen" />
+      </div>
+      <div class="api">
+        <h5>API</h5>
+        <a
+          href="https://thronesapi.com/swagger/index.html?urls.primaryName=Game%20of%20Thrones%20API%20v2"
+          target="_blank"
         >
-          <path
-            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
-          />
-        </svg>
-      </a>
+          <img src="../assets/images/api.png" alt="API" />
+        </a>
+      </div>
+      <div class="streaming">
+        <h5>Plataforma</h5>
+        <a href="https://www.hbo.com/game-of-thrones" target="_blank">
+          <img src="../assets/images/hbo.png" alt="HBO" class="logo-hbo" />
+        </a>
+      </div>
+      <div class="github">
+        <h5>GitHub</h5>
+        <a
+          class="github"
+          href="https://github.com/Cris02Vanegas"
+          target="_blank"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            class="bi bi-github"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+            />
+          </svg>
+        </a>
+      </div>
+      <div>
+        <img src="../assets/images/logo2.png" alt="logo-stark" />
+      </div>
+    </div>
+    <div class="col mb-2 mt-4 logo-footer">
+      <p class="text-body-light fs-5">© Game Of Thrones</p>
     </div>
   </footer>
 </main>
