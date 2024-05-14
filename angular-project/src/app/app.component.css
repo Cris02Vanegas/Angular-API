@@ -215,6 +215,10 @@ footer {
   align-items: center;
 }
 
+.github {
+  color: white;
+}
+
 footer h5 {
   margin-bottom: 10px;
 }
