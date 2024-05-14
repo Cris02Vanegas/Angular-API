@@ -2,8 +2,8 @@
 
 ## Game Of Thrones - API
 
-#### - Cristhian Vanegas
+### Que se quiere mostrar en la página...
 
-### Que se quieres en el proyecto?
+En esta página se consumio un api de Game Of Thrones y donde estamos visualizando los atributos de varios personajes.
 
-En este proyecto buscamos utilizar api mediante angular y poder visualizarlo en la pagina web
+### - Cristhian Vanegas
