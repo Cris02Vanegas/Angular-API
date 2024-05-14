@@ -21,9 +21,7 @@ export class AppComponent {
       console.log("Respuesta: ",respuesta);
       if (respuesta) {
         this.datosApiGot = respuesta;
-        console.log("Bien");
       } else {
-        console.log("Ocurrio error");
       }
       
     });
