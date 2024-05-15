@@ -18,7 +18,6 @@ export class AppComponent {
 
   obtenerDatosGot(){
     this.dataService.obtenerDatos().subscribe((respuesta:any)=>{
-      console.log("Respuesta: ",respuesta);
       if (respuesta) {
         this.datosApiGot = respuesta;
       } else {

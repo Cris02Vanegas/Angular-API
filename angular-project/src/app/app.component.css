@@ -45,8 +45,8 @@ h4 {
 }
 
 .personajes {
-  height: 400px;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   object-fit: cover;
 }
 
@@ -238,5 +238,29 @@ footer h5 {
   .streaming,
   .github {
     margin-bottom: 15px;
+  }
+}
+
+@media only screen and (min-width: 430px) and (max-width: 915px) {
+  .container-card {
+    margin: 0 15px 0 15px;
+  }
+
+  .banner-footer {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .logo-footer,
+  .api,
+  .streaming,
+  .github {
+    margin-bottom: 15px;
+  }
+
+  .personajes {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
   }
 }
